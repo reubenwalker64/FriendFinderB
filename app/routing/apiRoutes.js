@@ -41,11 +41,12 @@ module.exports = function(app) {
   // Below code handles when users "visit" a page.
   // In each of the below cases when a user visits a link
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-	//EXAMPLE
-	/* app.get("/", function(req, res) {
+  //insure that you have at least one HTML page being served at the "/" route. Example:
+
+	app.get("/", function(req, res) {
 	  res.json(path.join(__dirname, "public/index.html"));
 	});
-	*/
+
   // ---------------------------------------------------------------------------
 
   app.get("/api/friends", function(req, res) {
@@ -64,14 +65,15 @@ module.exports = function(app) {
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing middleware
 		//EDIT BELOW
-    if (tableData.length < 5) {
-      tableData.push(req.body);
+    if (friendsData.length < 5) {
+      friendsData.push(req.body);
       res.json(true);
     }
     else {
-      waitListData.push(req.body);
+      friendsData.push(req.body);
       res.json(false);
     }
+		//EDIT ABOVE
   });
 
   // ---------------------------------------------------------------------------
@@ -80,8 +82,7 @@ module.exports = function(app) {
 
   app.post("/api/clear", function(req, res) {
     // Empty out the arrays of data
-    tableData.length = [];
-    waitListData.length = [];
+    friendsData.length = [];
 
     res.json({ ok: true });
   });
