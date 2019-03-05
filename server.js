@@ -5,7 +5,7 @@
 // ==============================================================================
 
 var express = require("express");
-var express = require("path");
+var path = require("path");
 // req.body is available since we're using the body parsing
 var bodyParser = require("body-parser");
 // ==============================================================================
