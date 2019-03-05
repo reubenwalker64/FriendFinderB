@@ -60,11 +60,14 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/friends", function(req, res) {
+  app.post("/api/friends", function(req, res)
+		console.log(req.body.scores);
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
-		//EDIT BELOW
+    // req.body is available since we're using the body parsing
+		var user = req.body;
+
+		//EDIT BELOW with for loop?
     if (friendsData.length < 5) {
       friendsData.push(req.body);
       res.json(true);
