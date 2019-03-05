@@ -21,7 +21,7 @@
    * The modal should display both the name and picture of the closest match.
 EDIT Below FOR FRIENDS JS
 */
-
+var path = require("path");
 // ===============================================================================
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
@@ -29,8 +29,6 @@ EDIT Below FOR FRIENDS JS
 // ===============================================================================
 
 var friends = require("../data/friends");
-
-
 
 // ===============================================================================
 // ROUTING
@@ -41,11 +39,12 @@ module.exports = function(app) {
   // Below code handles when users "visit" a page.
   // In each of the below cases when a user visits a link
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  //insure that you have at least one HTML page being served at the "/" route. Example:
 
-	app.get("/", function(req, res) {
-	  res.json(path.join(__dirname, "public/index.html"));
-	});
+	//insure that you have at least one HTML page being served at the "/" route. Example:
+
+	// app.get("/", function(req, res) {
+	//   res.json(path.join(__dirname, "public/index.html"));
+	// });
 
   // ---------------------------------------------------------------------------
 
@@ -60,14 +59,14 @@ module.exports = function(app) {
   // Then the server saves the data to the tableData array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/friends", function(req, res)
+  app.post("/api/friends", function(req, res) {
 		console.log(req.body.scores);
     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
     // It will do this by sending out the value "true" have a table
     // req.body is available since we're using the body parsing
 		var user = req.body;
 
-		//EDIT BELOW with for loop?
+		/*EDIT BELOW with for loop?
     if (friendsData.length < 5) {
       friendsData.push(req.body);
       res.json(true);
@@ -76,7 +75,7 @@ module.exports = function(app) {
       friendsData.push(req.body);
       res.json(false);
     }
-		//EDIT ABOVE
+		*/
   });
 
   // ---------------------------------------------------------------------------

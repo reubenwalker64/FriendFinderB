@@ -33,7 +33,7 @@ var friends = [
 		5,
 		4,
 		1]
-  }
+  },
 
 	{
     name: "Eric Red",
@@ -48,7 +48,7 @@ var friends = [
 		1,
 		2,
 		1]
-  }
+  },
 
 	{
     name: "India Faux",
@@ -63,7 +63,7 @@ var friends = [
 		2,
 		1,
 		5]
-  }
+  },
 
 	{
     name: "Jean Iris",
@@ -78,7 +78,7 @@ var friends = [
 		4,
 		5,
 		2]
-  }
+  },
 
 	{
 		name: "Jeff Painter",
@@ -93,7 +93,7 @@ var friends = [
 		4,
 		5,
 		2]
-	}
+	},
 
 	{
     name: "MC Jones",
@@ -108,7 +108,7 @@ var friends = [
 		4,
 		2,
 		2]
-  }
+  },
 ];
 
 
