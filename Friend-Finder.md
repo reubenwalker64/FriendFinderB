@@ -34,9 +34,11 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 
 * Please submit both the deployed Heroku link to your homework AND the link to the Github Repository!
 
-[View Repository](https://github.com/reubenwalker64/FriendFinderB)
+[View GitHub Repository](https://github.com/reubenwalker64/FriendFinderB)
 
 [View on portfolio page of Reuben's portfolio](https://reubenwalker64.github.io/updated-portfolio/portfolio.html)
+
+[View on Heroku](https://guarded-beyond-40891.herokuapp.com/)
 
 ### Instructions
 
